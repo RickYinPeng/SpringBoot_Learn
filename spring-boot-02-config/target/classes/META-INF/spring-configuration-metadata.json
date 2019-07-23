@@ -1,0 +1,47 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.atyp.springboot02config.bean.Person",
+      "name": "person",
+      "type": "com.atyp.springboot02config.bean.Person"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.atyp.springboot02config.bean.Person",
+      "name": "person.age",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.atyp.springboot02config.bean.Person",
+      "name": "person.birth",
+      "type": "java.util.Date"
+    },
+    {
+      "sourceType": "com.atyp.springboot02config.bean.Person",
+      "name": "person.boss",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.atyp.springboot02config.bean.Person",
+      "name": "person.dog",
+      "type": "com.atyp.springboot02config.bean.Dog"
+    },
+    {
+      "sourceType": "com.atyp.springboot02config.bean.Person",
+      "name": "person.last-name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.atyp.springboot02config.bean.Person",
+      "name": "person.lists",
+      "type": "java.util.List<java.lang.Object>"
+    },
+    {
+      "sourceType": "com.atyp.springboot02config.bean.Person",
+      "name": "person.maps",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>"
+    }
+  ]
+}
