@@ -1,41 +1,33 @@
-package com.atyp.springboot.controller;
+package com.atyp.springboot.config;
 
+import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.context.annotation.Configuration;
 
+import javax.sql.DataSource;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
  * @author: RickYin
  * @version: 1.0
- * @createDate: 2019/07/23 下午7:49
- * @see: com.atyp.springboot.controller
+ * @createDate: 2019/07/23 下午8:06
+ * @see: com.atyp.springboot.config
  * @desception:
  */
-@Controller
-public class HelloController {
+@Configuration
+public class DruidConfig {
 
-    @Autowired
-    JdbcTemplate jdbcTemplate;
-
-    @ResponseBody
-    @RequestMapping("/query")
-    public Map<String,Object> map(){
-        List<Map<String, Object>> list =
-                jdbcTemplate.queryForList("select * from department");
-        System.out.println(list.size());
-        return list.get(0);
+    @ConfigurationProperties(prefix = "spring.datasource")
+    @Bean
+    public DataSource druid(){
+        return new DruidDataSource();
     }
 
     //配置Druid监控
@@ -58,8 +50,11 @@ public class HelloController {
         FilterRegistrationBean bean = new FilterRegistrationBean();
         bean.setFilter(new WebStatFilter());
         Map<String,String> initParams = new HashMap<>();
+        //不拦截哪些请求
         initParams.put("exclusions", "*.js,*.css,/druid/*");
+
         bean.setInitParameters(initParams);
+        //拦截哪些请求
         bean.setUrlPatterns(Arrays.asList("/*"));
         return bean;
     }
