@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://182.254.165.169:3306/jpa
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+#     更新或者创建数据表结构
+      ddl-auto: update
+#   控制台显示SQL
+    show-sql: true
+
