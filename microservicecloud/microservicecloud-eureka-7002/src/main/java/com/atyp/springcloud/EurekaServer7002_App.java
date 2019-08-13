@@ -2,17 +2,19 @@ package com.atyp.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * @author: RickYin
  * @version: 1.0
- * @createDate: 2019/08/04 下午5:28
+ * @createDate: 2019/08/10 下午3:04
  * @see: com.atyp.springcloud
  * @desception:
  */
 @SpringBootApplication
-public class DeptConsumer80_APP {
+@EnableEurekaServer   // EurekaServer 服务端启动类。接受其他微服务注册进来
+public class EurekaServer7002_App {
     public static void main(String[] args) {
-        SpringApplication.run(DeptConsumer80_APP.class,args);
+        SpringApplication.run(EurekaServer7002_App.class,args);
     }
 }

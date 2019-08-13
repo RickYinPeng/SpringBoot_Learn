@@ -13,10 +13,8 @@ import org.springframework.web.client.RestTemplate;
  */
 @Configuration
 public class configBean {
-
     @Bean
     public RestTemplate restTemplate(){
         return new RestTemplate();
     }
-
 }
