@@ -1,6 +1,6 @@
 package com.atyp.springcloud.controller;
 
-import com.atguigu.springcloud.entites.Dept;
+import com.atyp.springcloud.entites.Dept;
 import com.atyp.springcloud.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;

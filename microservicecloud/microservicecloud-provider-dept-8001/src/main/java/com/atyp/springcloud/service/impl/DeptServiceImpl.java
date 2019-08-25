@@ -1,10 +1,9 @@
 package com.atyp.springcloud.service.impl;
 
-import com.atguigu.springcloud.entites.Dept;
+import com.atyp.springcloud.entites.Dept;
 import com.atyp.springcloud.dao.DeptDao;
 import com.atyp.springcloud.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

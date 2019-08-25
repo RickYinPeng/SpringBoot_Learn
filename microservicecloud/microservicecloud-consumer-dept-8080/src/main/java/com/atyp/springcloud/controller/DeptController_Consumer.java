@@ -1,18 +1,13 @@
 package com.atyp.springcloud.controller;
 
-import com.atguigu.springcloud.entites.Dept;
-import com.sun.org.apache.bcel.internal.generic.LSTORE;
-import org.omg.CORBA.INTERNAL;
+import com.atyp.springcloud.entites.Dept;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * @author: RickYin

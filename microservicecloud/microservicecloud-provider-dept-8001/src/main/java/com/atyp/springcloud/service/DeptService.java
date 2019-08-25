@@ -1,6 +1,6 @@
 package com.atyp.springcloud.service;
 
-import com.atguigu.springcloud.entites.Dept;
+import com.atyp.springcloud.entites.Dept;
 
 import java.util.List;
 

@@ -1,1 +1,2 @@
-com/atguigu/springcloud/entites/Dept.class
+com/atyp/springcloud/entites/Dept.class
+com/atyp/springcloud/service/DeptClientService.class

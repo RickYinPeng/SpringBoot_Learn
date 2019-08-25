@@ -1,6 +1,6 @@
 package com.atyp.springcloud.dao;
 
-import com.atguigu.springcloud.entites.Dept;
+import com.atyp.springcloud.entites.Dept;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
